@@ -20,10 +20,10 @@ function draw() {
   rect(50, 350, 200, 50);
 
   // main text 
-  text("I’m so nervous for my first day of work!", 50, 450);
+  text("I’m so nervous for my first day of work!", 50, 465);
 
   // character name text
-  text("You", 100, 350);
+  text("You", 100, 385);
 
 }
 
