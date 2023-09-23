@@ -12,8 +12,18 @@ function setup() {
 
 function draw() {
   background(200);
+
+  // main text box
   rect(0, 400, 1000, 200);
+
+  // character name box (doesn't show when protagonist is monologuing)
   rect(50, 350, 200, 50);
+
+  // main text 
   text("I’m so nervous for my first day of work!", 50, 450);
+
+  // character name text
+  text("You", 100, 350);
+
 }
 
