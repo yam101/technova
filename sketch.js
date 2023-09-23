@@ -1,11 +1,15 @@
 let font;
 let titleFont;
 let mainText = [];
-let bgColour = 200;
 let counter = 0;
 let person = "You";
 let you = [];
 let mike = [];
+
+let bgColour = color(200, 200, 200);
+let darkPurple = color(57, 0, 64);
+let lightPurple = color(115, 0, 113);
+let pinnk = color(220, 149, 150);
 
 function preload() {
   font = loadFont('fonts/Abaddon Bold.ttf');
@@ -83,6 +87,8 @@ function setup() {
 function draw() {
   background(bgColour);
 
+  
+
   // main text box
   rect(0, 400, 1000, 200);
 
@@ -94,6 +100,7 @@ function draw() {
   text(mainText[counter], 50, 465);
 
   // character name text
+  stroke(255, 204, 100);
   textFont(titleFont);
   text(person, 100, 385);
 
