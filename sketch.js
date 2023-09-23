@@ -1,3 +1,9 @@
+let newFont;
+
+function preload() {
+  //newFont = loadFont('fonts')
+}
+
 function setup() {
   createCanvas(1000, 600);
 }
