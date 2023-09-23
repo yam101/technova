@@ -62,10 +62,12 @@ function preload() {
 function setup() {
   createCanvas(1000, 600);
   textSize(30);
+  textWrap(WORD);
   textFont(font);
 }
 
 function draw() {
+  textWrap(WORD);
   background(bgColour);
 
   // main text box
