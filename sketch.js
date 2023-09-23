@@ -17,3 +17,9 @@ function draw() {
   text("some random text", 500, 500);
 }
 
+function keyPressed() {
+  if (keyCode === RIGHT_ARROW) {
+    //change text
+    text("test", 400, 400);
+  }
+}
