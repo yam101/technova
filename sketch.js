@@ -11,6 +11,6 @@ function setup() {
 function draw() {
   background(200);
 
-  rect(800, 200, 100, 400);
+  rect(0, 400, 1000, 200);
 }
 
