@@ -12,12 +12,13 @@ function preload() {
   mike = []
 
   // intro monologue scene
+  // BACKGROUND: office lounge
   mainText[0] = "I'm so nervous for my first day of work!";
   mainText[1] = "It's a new company, a new boss, and a new position, too; I'm a \ndeveloper!";
   mainText[2] = "I have been coding during my own free time for a few years now, \nbut I have never done it professionally...";
   mainText[3] = "I applied for a job at this tech company because my friend told me \nto, and I guess they were impressed enough by my projects, because \nI'm here now...";
   mainText[4] = "I hope everything goes well...";
-  // scene changes to office
+  // BACKGROUND: boss' office
   mainText[5] = "Oh my god, thats my new boss over there!";
   mainText[6] = "I should introduce myself to him.";
   // conversation with boss begins
@@ -36,7 +37,8 @@ function preload() {
   mainText[19] = "Hm, that was a bit disappointing, I was really excited to utilize my \nprogramming skills… I have a lot of experience in web dev and I was \nhoping I could apply them.";
   mainText[20] = "Well hopefully I'll get to do that on the next project...";
   mainText[21] = "...";
-  // conversation with colleague begins 
+  // conversation with Mike begins 
+  // BACKGROUND: Mike's place
   mainText[22] = "Hey, could you get me a coffee?";
   mainText[23] = "...what?";
   mainText[24] = "Listen, I'm super stressed with this big tech project, so some \ncoffee would really hit the spot right now. Okay?";
@@ -51,12 +53,14 @@ function preload() {
   mainText[33] = "...Can you still grab me that coffee, though?";
   mainText[34] = "Umm... okay... sure...";
   // breakdown monologue begins
-  mainText[35] = "I was so excited to work on the project...";
-  mainText[36] = "Maybe I should just forget about all of this...";
-  mainText[37] = "Applying to this job was such a stupid idea anyways, why did I \never think I could become some big-shot developer?";
-  mainText[38] = "I shouldn't have even bothered trying...";
-  mainText[39] = "I'm really not cut out for this, am I?";
-  mainText[40] = "...What is even the point of this...";
+  // BACKGROUND: all black
+  mainText[34] = "I was so excited to work on the project...";
+  mainText[35] = "Maybe I should just forget about all of this...";
+  mainText[36] = "Applying to this job was such a stupid idea anyways, why did I ever think I could become some big-shot developer?";
+  mainText[37] = "I shouldn’t have even bothered trying...";
+  mainText[38] = "I’m really not cut out for this, am I?";
+  mainText[39] = "...What is even the point of this...";
+  // PART B BEGINS
 }
 
 function setup() {
