@@ -2,9 +2,14 @@ let newFont;
 let mainText = [];
 let bgColour = 200;
 let counter = 0;
+let person = "You";
+let you = [];
+let mike = [];
 
 function preload() {
   font = loadFont('fonts/Abaddon Bold.ttf');
+  you = [0, 1, 2, 3, 4];
+  mike = []
 
   mainText[0] = "I’m so nervous for my first day of work!";
   mainText[1] = "It’s a new company, a new boss, and a new position, too; I’m a developer!";
@@ -32,13 +37,21 @@ function draw() {
   text(mainText[counter], 50, 465);
 
   // character name text
-  text("You", 100, 385);
+  text(person, 100, 385);
 
 }
 
 function keyPressed() {
   if (keyCode === 32) {
-    bgColour = 255;
     counter++;
+    for (let i = 0; i < mainText.length; i++) {
+      if (counter === you[i]) {
+        person = "You";
+      }
+      else if (counter === mike[i]) {
+        person = "Mike";
+      }
+    }
+
   }
 }
