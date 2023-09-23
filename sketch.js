@@ -13,6 +13,7 @@ function setup() {
 function draw() {
   background(200);
   rect(0, 400, 1000, 200);
+  rect(50, 350, 200, 50);
   text("some random text", 500, 500);
 }
 
