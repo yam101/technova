@@ -9,7 +9,7 @@ let mike = [];
 let bgColour = color(200, 200, 200);
 let darkPurple = color(57, 0, 64);
 let lightPurple = color(115, 0, 113);
-let pinnk = color(220, 149, 150);
+let pink = color(220, 149, 150);
 
 function preload() {
   font = loadFont('fonts/Abaddon Bold.ttf');
@@ -85,9 +85,10 @@ function setup() {
 }
 
 function draw() {
-  background(bgColour);
+  background(200, 200, 200);  
 
-  
+  // text boxes colour
+  fill(255, 255, 255);
 
   // main text box
   rect(0, 400, 1000, 200);
@@ -95,11 +96,14 @@ function draw() {
   // character name box (doesn't show when protagonist is monologuing)
   rect(50, 350, 200, 50);
 
+  // font colours
+  fill(220, 149, 150)
   // main text 
   textFont(font);
   text(mainText[counter], 50, 465);
 
   // character name text
+  // text dropshadow colour
   stroke(255, 204, 100);
   textFont(titleFont);
   text(person, 100, 385);
