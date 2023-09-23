@@ -37,10 +37,7 @@ function draw() {
 }
 
 function keyPressed() {
-  if (keyCode === RIGHT_ARROW) {
-    //change text
-    //text("test", 400, 400);
-
+  if (keyCode === 32) {
     bgColour = 255;
     counter++;
   }
