@@ -9,14 +9,6 @@ let showBox = false;
 let bg;
 let bossOfficeBG;
 
-// RGB colour codes
-// please change the background colour
-/*
-let bgColour = color(200, 200, 200);
-let darkPurple = color(57, 0, 64);
-let lightPurple = color(115, 0, 113);
-let pink = color(220, 149, 150);*/
-
 function preload() {
   font = loadFont('fonts/Abaddon Bold.ttf');
   titleFont = loadFont('fonts/fibberish.ttf');
