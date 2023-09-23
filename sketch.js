@@ -1,7 +1,10 @@
 let newFont;
+let mainText = [];
 
 function preload() {
   font = loadFont('fonts/Abaddon Bold.ttf');
+
+  mainText[0] = "I’m so nervous for my first day of work!";
 }
 
 function setup() {
@@ -20,7 +23,7 @@ function draw() {
   rect(50, 350, 200, 50);
 
   // main text 
-  text("I’m so nervous for my first day of work!", 50, 465);
+  text(mainText[0], 50, 465);
 
   // character name text
   text("You", 100, 385);
