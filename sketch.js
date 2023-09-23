@@ -15,11 +15,11 @@ function preload() {
   // BACKGROUND: office lounge
   mainText[0] = "I'm so nervous for my first day of work!";
   mainText[1] = "It's a new company, a new boss, and a new position, too; I'm a \ndeveloper!";
-  mainText[2] = "I have been coding websites during my free time for a few years now, \nbut I have never done it professionally...";
+  mainText[2] = "I have been coding websites during my free time for a few years \nnow, but I have never done it professionally...";
   mainText[3] = "I applied for a job at this tech company because my friend told me \nto, and I guess they were impressed enough by my projects, because \nI'm here now...";
   mainText[4] = "I hope everything goes well...";
   mainText[4] = "...";
-  mainText[5] = "Oh my god, thats my new boss over there!";
+  mainText[5] = "Oh my god, that's my new boss over there!";
   mainText[6] = "I should introduce myself to him.";
   // conversation with boss begins
   // Boss appears
@@ -27,7 +27,7 @@ function preload() {
   mainText[7] = "Hi, I'm the new employee, and its my first day here! Where can I \nstart?";
   mainText[8] = "Oh, hey. Welcome to the team.";
   mainText[9] = "We are working on a pretty big project right now, so it would be a \nlittle hard to squeeze you in...";
-  mainText[10] = "I guess for now you can help the team document the project.";
+  mainText[10] = "I guess for now you can help the team document the code for the\nproject.";
   mainText[11] = "Oh... I thought I was going to be working on the development team?";
   mainText[12] = "Hm, well, you're a little new for that, aren't you? ";
   mainText[13] = "Don't want you to end up all confused.";
@@ -56,15 +56,15 @@ function preload() {
   mainText[32] = "Oh, that seems a little more fit for you.";
   mainText[33] = "...Can you still grab me that coffee, though?";
   mainText[34] = "Umm... okay... sure...";
-  mainText[33] = "I walk away as fast as I can, trying to hold back the tears in my eyes.";
+  mainText[33] = "I walk away as fast as I can, trying to hold back the tears in \nmy eyes.";
   // breakdown monologue begins
   // BACKGROUND: all black
   mainText[34] = "...";
   mainText[34] = "I was so excited to work on the project...";
   mainText[35] = "Maybe I should just forget about all of this...";
-  mainText[36] = "Applying to this job was such a stupid idea anyways, why did I ever think I could become some big-shot developer?";
-  mainText[37] = "I shouldn’t have even bothered trying...";
-  mainText[38] = "I’m really not cut out for this, am I?";
+  mainText[36] = "Applying to this job was such a stupid idea anyways, why did I \never think I could become some big-shot developer?";
+  mainText[37] = "I shouldn't have even bothered trying...";
+  mainText[38] = "I'm really not cut out for this, am I?";
   mainText[39] = "...What is even the point of this...";
   mainText[39] = "...";
   // PART B BEGINS
