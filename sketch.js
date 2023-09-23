@@ -2,10 +2,13 @@ let font;
 let titleFont;
 let mainText = [];
 let counter = 0;
-let person = "You";
+let person = "Monologue";
 let you = [];
 let mike = [];
+let showBox = false;
 
+// RGB colour codes
+// please change the background colour
 let bgColour = color(200, 200, 200);
 let darkPurple = color(57, 0, 64);
 let lightPurple = color(115, 0, 113);
@@ -94,20 +97,29 @@ function draw() {
   rect(0, 400, 1000, 200);
 
   // character name box (doesn't show when protagonist is monologuing)
-  rect(50, 350, 200, 50);
+  if (showBox) {
 
-  // font colours
+    rect(50, 350, 200, 50);
+
+    // character name text
+    
+
+    // character name box font colour
+    fill(220, 149, 150)
+    // text dropshadow colour
+    stroke(57, 0, 64);
+    // you can also add strokeWeight() here to make the dropshadow larger
+    textFont(titleFont);
+    text(person, 100, 385);
+  }
+
+  // main font colour
   fill(220, 149, 150)
+  // no dropshadow for main text, this also removes borders around the boxes; can be removed if you want there to borders
+  noStroke();
   // main text 
   textFont(font);
   text(mainText[counter], 50, 465);
-
-  // character name text
-  // text dropshadow colour
-  stroke(255, 204, 100);
-  textFont(titleFont);
-  text(person, 100, 385);
-
 }
 
 function keyPressed() {
@@ -116,11 +128,21 @@ function keyPressed() {
     counter++;
 
     for (let i = 0; i < mainText.length; i++) {
-      if (counter === you[i]) {
+      if (counter === monologue[i]) {
+        person = "Monologue";
+        showBox = false;
+      }
+      else if (counter === you[i]) {
         person = "You";
+        showBox = true;
+      }
+      else if (counter === boss[i]) {
+        person = "Boss";
+        showBox = true;
       }
       else if (counter === mike[i]) {
         person = "Mike";
+        showBox = true;
       }
     }
 
