@@ -15,5 +15,6 @@ function draw() {
   rect(0, 400, 1000, 200);
   rect(50, 350, 200, 50);
   text("some random text", 500, 500);
+  text("hi", 600, 500);
 }
 
