@@ -44,6 +44,7 @@ function draw() {
 function keyPressed() {
   if (keyCode === 32) {
     counter++;
+
     for (let i = 0; i < mainText.length; i++) {
       if (counter === you[i]) {
         person = "You";
