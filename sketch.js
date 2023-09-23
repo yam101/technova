@@ -1,4 +1,5 @@
-let newFont;
+let font;
+let titleFont;
 let mainText = [];
 let bgColour = 200;
 let counter = 0;
@@ -8,6 +9,7 @@ let mike = [];
 
 function preload() {
   font = loadFont('fonts/Abaddon Bold.ttf');
+  titleFont = loadFont('fonts/fibberish.ttf');
   monologue = [0, 1, 2, 3, 4, 5, 6, 7, 16, 20, 21, 22, 23, 37, 38, 39, 40, 41, 42, 43, 44, 45];
   you = [8, 12, 17, 19, 25, 27, 29, 31, 33, 36];
   boss = [9, 10, 11, 13, 14, 15, 18];
@@ -75,7 +77,7 @@ function preload() {
 function setup() {
   createCanvas(1000, 600);
   textSize(30);
-  textFont(font);
+
 }
 
 function draw() {
@@ -88,9 +90,11 @@ function draw() {
   rect(50, 350, 200, 50);
 
   // main text 
+  textFont(font);
   text(mainText[counter], 50, 465);
 
   // character name text
+  textFont(titleFont);
   text(person, 100, 385);
 
 }
