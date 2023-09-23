@@ -1,5 +1,7 @@
 let newFont;
 let mainText = [];
+let bgColour = 200;
+let counter = 0;
 
 function preload() {
   font = loadFont('fonts/Abaddon Bold.ttf');
@@ -18,7 +20,7 @@ function setup() {
 }
 
 function draw() {
-  background(200);
+  background(bgColour);
 
   // main text box
   rect(0, 400, 1000, 200);
@@ -27,7 +29,7 @@ function draw() {
   rect(50, 350, 200, 50);
 
   // main text 
-  text(mainText[0], 50, 465);
+  text(mainText[counter], 50, 465);
 
   // character name text
   text("You", 100, 385);
@@ -37,6 +39,9 @@ function draw() {
 function keyPressed() {
   if (keyCode === RIGHT_ARROW) {
     //change text
-    text("test", 400, 400);
+    //text("test", 400, 400);
+
+    bgColour = 255;
+    counter++;
   }
 }
