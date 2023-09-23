@@ -6,13 +6,16 @@ let person = "Monologue";
 let you = [];
 let mike = [];
 let showBox = false;
+let bg;
+let bossOfficeBG;
 
 // RGB colour codes
 // please change the background colour
+/*
 let bgColour = color(200, 200, 200);
 let darkPurple = color(57, 0, 64);
 let lightPurple = color(115, 0, 113);
-let pink = color(220, 149, 150);
+let pink = color(220, 149, 150);*/
 
 function preload() {
   font = loadFont('fonts/Abaddon Bold.ttf');
@@ -21,6 +24,9 @@ function preload() {
   you = [8, 12, 17, 19, 25, 27, 29, 31, 33, 36];
   boss = [9, 10, 11, 13, 14, 15, 18];
   mike = [24, 26, 28, 30, 32, 34, 35];
+
+  // load in backgrounds
+  bossOfficeBG = loadImage("assets/bossOffice.png");
 
   // intro monologue scene
   // BACKGROUND: office lounge
@@ -49,8 +55,8 @@ function preload() {
   mainText[19] = "Okay! Thank you!";
   // BACKGROUND: office lounge
   mainText[20] = "Hmm, that was a bit disappointing. I was really excited to utilize my \nprogramming skills...";
-  mainText[21] = "I have a lot of experience in web dev and I was \nhoping I could apply them.";
-  mainText[22] = "Well hopefully I'll get to do that on the next project...";
+  mainText[21] = "I have a lot of experience in web dev and I was hoping I could \napply them.";
+  mainText[22] = "Well, hopefully I'll get to do that on the next project...";
   mainText[23] = "...";
   // conversation with Mike begins 
   // Mike appears
@@ -84,14 +90,14 @@ function preload() {
 function setup() {
   createCanvas(1000, 600);
   textSize(30);
-
+  bg = (0, 0, 0);
 }
 
 function draw() {
-  background(200, 200, 200);  
+  background(bg);
 
   // text boxes colour
-  fill(255, 255, 255);
+  fill(57, 0, 64, 200);
 
   // main text box
   rect(0, 400, 1000, 200);
@@ -99,26 +105,29 @@ function draw() {
   // character name box (doesn't show when protagonist is monologuing)
   if (showBox) {
 
+    //character name rectangle
+    fill(115, 0, 113, 200);
     rect(50, 350, 200, 50);
 
     // character name text
-    
 
     // character name box font colour
-    fill(220, 149, 150)
+    fill(255, 255, 255)
     // text dropshadow colour
-    stroke(57, 0, 64);
+    //stroke(57, 0, 64);
     // you can also add strokeWeight() here to make the dropshadow larger
     textFont(titleFont);
-    text(person, 100, 385);
+    textSize(40);
+    text(person, 115, 385);
   }
 
   // main font colour
-  fill(220, 149, 150)
+  fill(255, 255, 255);
   // no dropshadow for main text, this also removes borders around the boxes; can be removed if you want there to borders
   noStroke();
   // main text 
   textFont(font);
+  textSize(30);
   text(mainText[counter], 50, 465);
 }
 
@@ -128,6 +137,7 @@ function keyPressed() {
     counter++;
 
     for (let i = 0; i < mainText.length; i++) {
+      // change name text
       if (counter === monologue[i]) {
         person = "Monologue";
         showBox = false;
@@ -143,6 +153,13 @@ function keyPressed() {
       else if (counter === mike[i]) {
         person = "Mike";
         showBox = true;
+      }
+      // change backgrounds
+      else if (counter === 8) {
+        bg = bossOfficeBG;
+      }
+      else if (counter === 38) {
+        bg = (0, 0, 0);
       }
     }
 
