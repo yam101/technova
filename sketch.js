@@ -12,5 +12,6 @@ function draw() {
   background(200);
 
   rect(0, 400, 1000, 200);
+  rect(100, 350, 150, 50);
 }
 
