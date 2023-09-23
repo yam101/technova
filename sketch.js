@@ -8,8 +8,10 @@ let mike = [];
 
 function preload() {
   font = loadFont('fonts/Abaddon Bold.ttf');
-  you = [0, 1, 2, 3, 4];
-  mike = []
+  monologue = [0, 1, 2, 3, 4, 5, 6, 7, 16, 20, 21, 22, 23, 37, 38, 39, 40, 41, 42, 43, 44, 45];
+  you = [8, 12, 17, 19, 25, 27, 29, 31, 33, 36];
+  boss = [9, 10, 11, 13, 14, 15, 18];
+  mike = [24, 26, 28, 30, 32, 34, 35];
 
   // intro monologue scene
   // BACKGROUND: office lounge
