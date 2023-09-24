@@ -7,7 +7,7 @@ let you = [];
 let mike = [];
 let showBox = false;
 let bg;
-let bossOfficeBG;
+let bossOfficeBackground;
 
 function preload() {
   font = loadFont('fonts/Abaddon Bold.ttf');
@@ -18,7 +18,7 @@ function preload() {
   mike = [24, 26, 28, 30, 32, 34, 35];
 
   // load in backgrounds
-  bossOfficeBG = loadImage("assets/bossOffice.png");
+  bossOfficeBackground = loadImage("assets/bossOffice.png");
 
   // intro monologue scene
   // BACKGROUND: office lounge
@@ -148,7 +148,7 @@ function keyPressed() {
       }
       // change backgrounds
       else if (counter === 8) {
-        bg = bossOfficeBG;
+        bg = bossOfficeBackground;
       }
       else if (counter === 38) {
         bg = (0, 0, 0);
