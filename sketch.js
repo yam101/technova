@@ -6,8 +6,15 @@ let person = "Monologue";
 let you = [];
 let mike = [];
 let showBox = false;
+// backgrounds
 let bg;
-let bossOfficeBackground;
+let mikeBackground;
+let bossOfficeBackground
+// character sprites
+let sprite;
+let mikeSprite;
+let bossSprite;
+let showSprite = false;
 
 function preload() {
   font = loadFont('fonts/Abaddon Bold.ttf');
@@ -18,7 +25,13 @@ function preload() {
   mike = [24, 26, 28, 30, 32, 34, 35];
 
   // load in backgrounds
+  mikeBackground = loadImage("assets/mikeOffice.png");
   bossOfficeBackground = loadImage("assets/bossOffice.png");
+
+  // load in sprites
+  bossSprite = loadImage("assets/boss.png");
+  mikeSprite = loadImage("assets/mike.png");
+  sprite = bossSprite;
 
   // intro monologue scene
   // BACKGROUND: office lounge
@@ -82,7 +95,7 @@ function preload() {
 function setup() {
   createCanvas(1000, 600);
   textSize(30);
-  bg = (0, 0, 0);
+  bg = mikeBackground;
 }
 
 function draw() {
@@ -93,6 +106,11 @@ function draw() {
 
   // main text box
   rect(0, 400, 1000, 200);
+
+  // sprite
+  if (showSprite) {
+    image(sprite, 350, 100, 300, 300);
+  }
 
   // character name box (doesn't show when protagonist is monologuing)
   if (showBox) {
@@ -137,18 +155,31 @@ function keyPressed() {
       else if (counter === you[i]) {
         person = "You";
         showBox = true;
+        showSprite = true;
       }
       else if (counter === boss[i]) {
         person = "Boss";
         showBox = true;
+        showSprite = true;
       }
       else if (counter === mike[i]) {
         person = "Mike";
         showBox = true;
+        showSprite = true;
+        sprite = mikeSprite;
       }
       // change backgrounds
-      else if (counter === 8) {
+      if (counter == 8) {
         bg = bossOfficeBackground;
+        sprite = bossSprite;
+        showSprite = true;
+      }
+      else if (counter === 20) {
+        bg = mikeBackground;
+        showSprite = false;
+      }
+      else if (counter === 37) {
+        showSprite = false;
       }
       else if (counter === 38) {
         bg = (0, 0, 0);
